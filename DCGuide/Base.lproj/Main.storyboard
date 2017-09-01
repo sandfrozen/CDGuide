@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--The List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DCGuide" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,9 +38,16 @@
                             <constraint firstItem="yVx-R7-3gG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="tAp-a7-qN8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kxJ-ur-Q03">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xo6-01-n9F"/>
+                    <navigationItem key="navigationItem" title="The List" id="kxJ-ur-Q03">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xo6-01-n9F">
+                            <connections>
+                                <action selector="addName:" destination="BYZ-38-t0r" id="DBN-0b-qfZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="yVx-R7-3gG" id="hRR-ev-Ra1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
